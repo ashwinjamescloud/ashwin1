@@ -6,11 +6,11 @@ on:
       param1:
         description: 'First parameter'
         type: string
-        default: "abc  "
+        default: " a "
       param2:
         description: 'Second parameter'
         type: string
-        default: "def "
+        default: "b "
     outputs:
        combineoutput: 
          description: "The combined word output"

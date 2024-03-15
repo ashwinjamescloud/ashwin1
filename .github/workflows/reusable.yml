@@ -19,7 +19,8 @@ jobs:
     steps:
       - name: Combine Parameters
         id: C2
-        run: echo ${{ inputs.param1 }}-${{ inputs.param2 }} >> $GITHUB_OUTPUT
+        # run: echo ${{ inputs.param1 }}-${{ inputs.param2 }} >> $GITHUB_OUTPUT
+        run: echo ' ${{ inputs.param1 }}-${{ inputs.param2 }} '
     outputs:
        output1: ${{steps.c2.outputs}}
         

@@ -20,6 +20,6 @@ jobs:
       - name: Combine Parameters
         id: C2
         run: echo ${{ inputs.param1 }}-${{ inputs.param2 }} >> $GITHUB_OUTPUT
-        outputs:
-          output1: ${{jobs.steps.c2.outputs}}
+    outputs:
+       output1: ${{jobs.steps.c2.outputs}}
         

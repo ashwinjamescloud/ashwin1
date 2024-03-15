@@ -14,7 +14,7 @@ on:
     outputs:
        combineoutput: 
        description: "The combined word output"
-       value: ${{jobs.combine_parameters.outputs.my_output}}
+       value: ${{ jobs.combine_parameters.outputs.my_output }}
        
       
 

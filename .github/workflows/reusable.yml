@@ -1,0 +1,23 @@
+name: Combine Action
+
+on:
+  workflow_dispatch:
+    inputs:
+      param1:
+        description: 'First parameter'
+        type: string
+        default: "abc  "
+      param2:
+        description: 'Second parameter'
+        type: string
+        default: "def "
+
+jobs:
+  combine_parameters:
+    name: Combine Parameters
+    runs-on: ubuntu-latest
+    steps:
+      - name: Combine Parameters
+        id: C2
+        run: echo "Combined parameters: ${{ inputs.param1 }}-${{ inputs.param2 }}" >> $GITHUB_OUTPUT
+        output: ${{jobs.steps.c2.outputs}}

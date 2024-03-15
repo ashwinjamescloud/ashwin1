@@ -1,7 +1,7 @@
 name: Combine Action
 
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       param1:
         description: 'First parameter'
@@ -13,8 +13,8 @@ on:
         default: "def "
     outputs:
        combineoutput: 
-       description: "The combined word output"
-       value: ${{ jobs.combine_parameters.outputs.my_output }}
+         description: "The combined word output"
+         value: ${{ jobs.combine_parameters.outputs.my_output }}
        
       
 

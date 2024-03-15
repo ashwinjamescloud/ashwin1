@@ -11,16 +11,18 @@ on:
         description: 'Second parameter'
         type: string
         default: "def "
+      
 
 jobs:
   combine_parameters:
     name: Combine Parameters
     runs-on: ubuntu-latest
+    outputs: ${{steps.c2.outputs.result}} 
     steps:
       - name: Combine Parameters
         id: C2
-        run: echo '${{ inputs.param1 }}-${{ inputs.param2 }} '>> $GITHUB_OUTPUT
+        run: echo '${{ inputs.param1 }}-${{ inputs.param2 }} '
         # run: echo ' ${{ inputs.param1 }}-${{ inputs.param2 }} '
-    outputs:
-       output1: ${{steps.c2.outputs}}
+        
+    
         
